@@ -54,10 +54,13 @@ Assignment1::~Assignment1() // destructor
     cout << "object deleted" << endl;
 }
 
-void Assignment1::Counter(ofstream outfile) // adds up amount of total and individual nucleotides
+void Assignment1::Counter(ifstream infile) // adds up amount of total and individual nucleotides
 {
     lineCount = 0;
-    for(int i = 0; i < outfile.size(); ++i)
+    //for(int i = 0; i < outfile.size(); ++i)
+
+    //{
+    while(!= outfile.eof()) // http://www.cplusplus.com/reference/ios/ios/eof/
     {
         char c = tolower(outfile[i]); // makes the nucleotides lowercase
         if(c == 'a')
@@ -71,6 +74,7 @@ void Assignment1::Counter(ofstream outfile) // adds up amount of total and indiv
         else if(c == '\n')
             lineCount++; // adds to total amount of lines
     }
+    //}
 }
 
 
@@ -284,9 +288,10 @@ void Assignment1::GaussianDistribution(ofstream outfile)
     {
         double a = ((double) rand() / (RAND_MAX)); // generates psuedorandom number between [0,1)
         double b = ((double) rand() / (RAND_MAX)); // another psuedorandom number between [0,1)
-        double C = sqrt(-2ln(a)) * cos(2*b*M_PI); // Box-Mueller transform to calculate standard Gaussian
-        double D = (stdDev * C) + mean; // calculates normal random variable D
+        double C = sqrt(-2log(a)) * cos(2*b*M_PI); // Box-Mueller transform to calculate standard Gaussian
+        double D = (stdDev * C) + mean; // normal random variable D is the length of the new string
 
+        string dnaString = ""; // create new DNA string
         for(int j = 0; j < D; ++j) //
         {
 

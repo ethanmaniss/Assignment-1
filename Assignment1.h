@@ -9,7 +9,7 @@ class Assignment1
         Assignment1(); //constructor
         ~Assignment1(); //destructor
 
-        void Counter(ofstream outfile);
+        void Counter(ifstream infile);
 
         void Sum(ofstream outfile);
         void Mean(ofstream outfile);

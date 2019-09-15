@@ -14,7 +14,7 @@ int main(int argc, char** argv)
         ifstream infile; // use for incoming data
         ofstream outfile; // use for outgoing data
 
-        outfile.open("ethanmaniss.out") // creates .out file to output results
+        outfile.open("ethanmaniss.out"); // creates .out file to output results
 
         outfile << "Ethan Maniss" << endl; // outputs student info first to the file
         outfile << "2324967" << endl;
@@ -28,11 +28,11 @@ int main(int argc, char** argv)
 
             cout << "Enter the text file name: " << endl; // prompts user for text file name
             cin >> text; // user inputs the name of a text file
-            infile.open(text.c_str());
+            infile.open(text.c_str()); // turns string into a char[]
 
             Assignment1 A1; // creates Assignment1 object
 
-            A1.Counter(outfile);
+            A1.Counter(infile);
             A1.Sum(outfile);
             A1.Mean(outfile);
             A1.Variance(outfile);
