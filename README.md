@@ -25,5 +25,10 @@ problems. My other methods for calculating the statistics were unable to
 successfully output the data to the new file because I could not figure out the
 file input.
 
+Another issue was that I could not figure out the algorithm for matching the statistics
+from the user-given file to the new file. I understood the calculations for
+C and D in generating random lengths, however I could not make the 1000 strings
+have the same mean/variance/nucleotide probability as the user-given file.
+
 g++ *.cpp
 ./a.out (yourfilename.txt)
