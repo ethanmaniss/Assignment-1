@@ -24,3 +24,6 @@ was reading from the file to attain the DNA strings, as well as other input/outp
 problems. My other methods for calculating the statistics were unable to
 successfully output the data to the new file because I could not figure out the
 file input.
+
+g++ *.cpp
+./a.out (yourfilename.txt)
