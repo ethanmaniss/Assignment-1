@@ -3,12 +3,13 @@
 #include <fstream>
 #include <stdlib.h>
 #include <math.h>
+#include <string>
 
 using namespace std;
 
 Assignment1::Assignment1() // constructor
 {
-    string text;
+    string dna;
 
     ofstream outfile; // use for outgoing data
     ifstream infile; // use for incoming data
@@ -54,15 +55,15 @@ Assignment1::~Assignment1() // destructor
     cout << "object deleted" << endl;
 }
 
-void Assignment1::Counter(ifstream infile) // adds up amount of total and individual nucleotides
+string Assignment1::Counter(ifstream infile) // adds up amount of total and individual nucleotides
 {
     lineCount = 0;
-    //for(int i = 0; i < outfile.size(); ++i)
+    //for(int i = 0; i < infile.size(); ++i)
 
     //{
-    while(!= outfile.eof()) // http://www.cplusplus.com/reference/ios/ios/eof/
+    while(!= infile.eof()) // http://www.cplusplus.com/reference/ios/ios/eof/
     {
-        char c = tolower(outfile[i]); // makes the nucleotides lowercase
+        char c = tolower(infile[i]); // makes the nucleotides lowercase
         if(c == 'a')
             Acount++; // adds to amount of A's
         else if(c == 'c')
